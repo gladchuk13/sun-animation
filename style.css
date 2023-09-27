@@ -1,0 +1,374 @@
+/* * {
+    border: 0;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.sun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    animation: sun-anim 3s infinite ;
+    transition: 0.5s;
+}
+.promin {
+    background-color: rgb(255, 213, 0);
+    height: 90px;
+    border-radius: 25px;
+    width: 10px;
+    animation: 3s sun-anim infinite ;
+    transition: 0.5s;
+    
+}
+.promin:first-child {
+    transform: rotate(0deg);
+    top: 27.5%;
+    position: absolute;
+    
+}
+.promin:nth-of-type(2) {
+    transform: rotate(45deg);
+    top: 32%;
+    position: absolute;
+    margin-left: 160px;
+}
+.promin:nth-of-type(3) {
+    transform: rotate(90deg);
+    top: 42%;
+    position: absolute;
+    margin-left: 220px;
+}
+.promin:nth-of-type(4) {
+    transform: rotate(135deg);
+    top: 54%;
+    position: absolute;
+    margin-left: 180px;
+}
+.promin:nth-of-type(5){
+    transform: rotate(180deg);
+    top: 57.2%;
+    position: absolute;
+    
+}
+.promin:nth-of-type(6) {
+    transform: rotate(225deg );
+    top: 54%;
+    position: absolute;
+    margin-left: -180px;
+}
+.promin:nth-of-type(7) {
+    transform: rotate(270deg);
+    top: 42%;
+    position: absolute;
+    margin-left: -220px;
+}
+.promin:nth-child(8) {
+    transform: rotate(315deg);
+    top: 32%;
+    position: absolute;
+    margin-left: -160px;
+}
+.main-sun {
+    background-color: rgb(255, 213, 0);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    animation: 3s sun-anim  infinite ;
+}
+
+@keyframes sun-anim {
+    0% {
+        .main-sun {
+            opacity: 1;
+        }
+        .promin {
+            width: 90px;
+        }
+    }
+    25% {
+        .main-sun {
+            opacity: 0;
+        }
+        .promin {
+            width: 20px;
+        }
+    }
+    50% {
+        .main-sun {
+            opacity: 1;
+        }
+        .promin {
+            width: 90px;
+        }
+    }
+    75% {
+        .main-sun {
+            opacity: 0;
+        }
+        .promin {
+            width: 20px;
+        }
+    }
+    100% {
+        .main-sun {
+            opacity: 1;
+        }
+        .promin {
+            width: 90px;
+        }
+    }
+}
+ */
+
+
+
+ * {
+    border: 0;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.sun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    position: relative;
+    height: 350px;
+    width: 350px;
+    border-radius: 100%;
+}
+.sun.hide {
+
+}
+
+.promin {
+    background-color: rgb(255, 213, 0);
+    height: 90px;
+    border-radius: 25px;
+    width: 10px;
+    animation: sun-anim 3s ;
+    transition: 0.5s;
+}
+
+.promin:nth-of-type(1) {
+    transform: rotate(0deg);
+    top: 0%;
+    position: absolute;
+    animation: sun-anim 3s ;
+}
+
+.promin:nth-of-type(2) {
+    transform: rotate(45deg);
+    top: 11%;
+    position: absolute;
+    right: 22%;
+    animation: sun-anim 3s ;
+}
+
+.promin:nth-of-type(3) {
+    transform: rotate(0deg);
+    top: 48%;
+    height: 10px;
+    width: 90px;
+    position: absolute;
+    right: 0%;
+    animation: promin-anim 3s ;
+    
+}
+
+.promin:nth-of-type(4) {
+    transform: rotate(135deg);
+    bottom: 12%;
+    position: absolute;
+    right: 22%;
+    animation: sun-anim 3s ;
+}
+
+.promin:nth-of-type(5){
+    transform: rotate(180deg);
+    bottom: 0;
+    position: absolute;
+    animation: sun-anim 3s ;
+}
+
+.promin:nth-of-type(6) {
+    transform: rotate(225deg);
+    animation: sun-anim 3s ;
+    bottom: 12%;
+    position: absolute;
+    left: 22%;
+}
+
+.promin:nth-of-type(7) {
+    transform: rotate(0deg);
+    animation: promin-anim 3s ;
+    top: 48%;
+    height: 10px;
+    width: 90px;
+    position: absolute;
+    left: 0%;
+}
+
+.promin:nth-of-type(8) {
+    transform: rotate(315deg);
+    animation: sun-anim 3s ;
+    top: 11%;
+    position: absolute;
+    left: 22%;
+}
+
+.main-sun {
+    background-color: rgb(255, 213, 0);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    animation: second 3s ;
+}
+@keyframes second {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes sun-anim {  
+    0%  {
+        height: 90px;
+        }
+    25% {
+        height: 20px;
+    }
+    50% {
+        height: 90px;
+    }
+    75% {
+        height: 20px;
+    }
+    100% {
+        height: 90px;
+    }    
+    }
+@keyframes promin-anim {
+    0%  {
+        width: 90px;
+        }
+    25% {
+        width: 20px;
+    }
+    50% {
+        width: 90px;
+    }
+    75% {
+        width: 20px;
+    }
+    100% {
+        width: 90px;
+    }    
+}
+.G_menu {
+    margin-top: 50px;
+}
+.G_menu-section {
+    display: flex;
+    max-width: 700px;
+    flex-wrap: wrap;
+}
+.G_card {
+    width: 300px;
+    margin-top: 40px;
+}
+.G_transfer {
+    width: 90px;
+    background-color: #dbdbdb;
+    padding: 20px;
+    border-radius: 30px;
+    transition: 0.6s;
+}
+.G_transfer:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+.G_group-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    margin-top: 27px;
+    display: flex;
+}
+.G_number {
+    color: red;
+}
+.G_first {
+}
+.G_card:nth-child(2) {
+    margin-left: 100px;
+}
+.G_phone {
+    display: block;
+    position: absolute;
+    top: 170%;
+    left: 64%;
+}
+.G_line {
+    border: 0.1px solid rgba(128, 128, 128, 0.822);
+    height: 0.1px;
+    margin-top: 50px;
+    opacity: 0.3;
+}
+
+
+/* Стилі для обгортки загрузки */
+/* .loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Стилі для самої анімації завантаження */
+/* .loader {
+    border: 4px solid #3498db;
+    border-top: 4px solid #e74c3c;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Анімація обертання */
+/* @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+ */
